@@ -1,0 +1,149 @@
+<html>
+<head>
+    <title>Login and Registration Form</title>
+    <link rel=stylesheet href="signin.css" type="text/css">
+</head>
+<body>
+    <div class="hero">
+    <div class="formbox">
+        <div class="bottonbox">
+            <div id="btn"></div>
+            <button type="button" class="lgnbutton" onclick="login()">LOG IN</button>
+            <button type="button" class="lgnbutton" onclick="signup()">SIGN UP</button>
+            </div>
+        <div class="social-icons">
+        <img src="fb.png">
+        <img src="tw.png">
+        <img src="gp.png">
+        </div>
+        <form name="form1" action="login.php" method="post" id="login" class="input-group">
+            <input type="text" class="input_field" placeholder="User ID" name="userid" required>
+            <input type="password" class="input_field" placeholder="Enter Password" name="psw" required>
+            <input type="checkbox" class="checkbx" name="remember"><span>Remember Password</span>
+            <button type="submit" class="submit-btn" onclick="ab()">Log In</button>
+            <button type="button" class="cancel-btn" onclick="location.href='accueil.html';  ">Cancel</button>
+            
+        </form>
+        <form action="login.php" method="post" id="signup" class="input-group">
+            <input type="text" class="input_field" placeholder="User ID" name="userid" id="usid" required>
+            <input type="email" class="input_field" placeholder="Enter Email" name="email" id="emaill" required>
+            <input type="password" class="input_field" placeholder="Enter Password" id="psword" name="psw" required>
+            <div class="bottonbox">
+            <div id="btn"></div>
+            <button type="button" class="stdnbutton" onclick="student()">Student</button>
+            <button type="button" class="stdnbutton" onclick="teacher()">Teacher</button>
+                
+            </div>
+            <button type="button" class="cancel-btn" onclick="location.href='accueil.html';  ">Cancel</button>
+        </form>
+            
+        <form action="login.php" method="post" id="Student" class="input-group">
+            <input type="text" class="input_field" id="fname" name="firstname" placeholder="First name:"required>
+            <input type="text" class="input_field" id="lname" name="lastname" placeholder="Last name:" required>
+            <input type="text" class="input_field" placeholder="Student ID" name="studentid" id="stdnum" required>
+            <input type="date" name="bday" id="bdy" class="input_field" required>
+                <br>
+            <input type="radio" name="gender" id="sexe" value="male" class="radioo"> Male
+            <input type="radio" name="gender" id="sexe" value="female" class="radioo"> Female
+            <input type="radio" name="gender" id="sexe" value="other" class="radioo"> Other
+            
+                <br>
+            <input type="radio" name="grade" id="grd" value="L1" class="radioo"> L1
+            <input type="radio" name="grade" id="grd" value="L2" class="radioo"> L2
+            <input type="radio" name="grade" id="grd" value="L3" class="radioo"> L3
+            <input type="radio" name="grade" id="grd" value="M1" class="radioo"> M1
+            <input type="radio" name="grade" id="grd" value="M2" class="radioo"> M2
+            <select class="input_field" name="spec">
+                <option  name="GL" selected><b> GL</b></option>
+                <option  name="BD"> <b>BD</b></option>
+                <option  name="SE"><b> SE</b></option>
+                <option  name="PL"><b> PL</b></option>
+    
+            </select>
+            <input type="checkbox" class="checkbx" id="agre" name="agreeTaC"><span>I agree to terms and conditions</span>
+            <button type="submit" class="submit-btn" onclick="location.href='accueil.html';  ">Sign Up</button>        
+        </form>
+        <form action="login.php" method="post" id="teacher" class="input-group">
+            <input type="text" class="input_field" name="firstname" placeholder="First name:"  required>
+            <input type="text" class="input_field" name="lastname" placeholder="Last name:" required>
+            <input type="text" class="input_field" placeholder="Teacher ID" name="teacherid" required>
+            <input type="date" class="input_field"  name="bday"  required>
+            <div>
+            <input type="radio" name="gender" value="male" class="radioo"> Male
+            <input type="radio" name="gender" value="female" class="radioo"> Female
+            <input type="radio" name="gender" value="other" class="radioo"> Other
+                </div>
+            <div>
+            <input type="radio" name="grade" value="MAA" class="radioo"> MAA
+            <input type="radio" name="grade" value="MCB" class="radioo"> MCB
+            <input type="radio" name="grade" value="MCA" class="radioo"> MCA
+            <input type="radio" name="grade" value="Prof" class="radioo"> Prof
+            </div>
+            <div>
+            <select class="input_field" name="spec">
+                <option  name="GL"><b> GL</b></option>
+                <option  name="BD"> <b>BD</b></option>
+                <option  name="SE"><b> SE</b></option>
+                <option  name="PL"><b> PL</b></option>
+    
+            </select>
+            </div>
+            <div id="chkbx">
+            <input type="checkbox" class="checkbxx" name="agreeTaC"><span>I agree to terms and conditions</span>
+                </div>
+            <button type="submit" class="submit-btnn"  onclick="location.href='accueil.html';  ">Sign Up</button>        
+            
+            
+            </form>
+           
+           
+       
+    </div>
+    </div>
+    <script>
+    var x= document.getElementById("login");
+    var y= document.getElementById("signup");
+    var z= document.getElementById("btn");
+    var n= document.getElementById("Student");
+    var m= document.getElementById("teacher");
+        function signup(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+             n.style.left="-400px";
+            m.style.left="-400px";
+        }
+        function login(){
+            y.style.left="-400px";
+            x.style.left="50px";
+            z.style.left="0px";
+            
+             n.style.left="-400px";
+            m.style.left="-400px";
+        }
+        function student(){
+            x.style.left="-400px";
+            y.style.left="-400px";
+            z.style.left="110px";
+            n.style.left="50px";
+            m.style.left="-400px";
+        }
+        function teacher(){
+            x.style.left="-400px";
+            y.style.left="-400px";
+            z.style.left="110px";
+            m.style.left="50px";
+            n.style.left="-400px";
+        }
+    </script>
+        <script>
+        function aa(){
+            var xmlhttp;
+            xmlhttp=new XMLHttpRequest();
+            xmlhttp.open("GET","insert.php?id="+document.getElementById("usid").value+"&email="+document.getElementById("emaill").value+"&pswd="+document.getElementById("psword").value+"&fnm="+document.getElementById("fname").value+"&lnm="+document.getElementById("lname").value+"&stdnm="+document.getElementById("stdnum").value+"&bd="+document.getElementById("bdy").value+"&sexe="+document.getElementById("sexe").value+"&grd="+document.getElementById("grd").value+"&agrr="+document.getElementById("agre").value,false);
+            xmlhtt.send(null);
+        }
+        </script>
+    
+</body>    
+</html>

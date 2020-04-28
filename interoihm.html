@@ -1,0 +1,72 @@
+<html>
+<head>
+    
+    <script>
+    function ff(){
+        var nb1= parseInt(document.getElementById('nb1').value);
+        var nb2= parseInt(document.getElementById('nb2').value);
+        var nb3= parseInt(document.getElementById('nb3').value);
+        var n1btn=document.getElementById('nb1').disabled;
+        var n2btn=document.getElementById('nb2').disabled;
+        var n3btn=document.getElementById('nb3').disabled;
+        var tl;
+        if(n1btn===true)
+            {
+                tl=nb2+nb3;
+                document.getElementById('total').value=nb2+nb3;
+            }else
+                {
+                    if(n2btn===true)
+                        {
+                            tl=nb1+nb3;
+                                document.getElementById('total').value=nb1+nb3;
+                        }else{
+                            if(n3btn===true)
+                                {
+                                    tl=nb2+nb1;
+                             document.getElementById('total').value=nb1+nb2;
+
+                                }else{
+                                    tl=nb1+nb2-nb3;
+                                            document.getElementById('total').value=nb1+nb2-nb3;
+
+                                }
+                        }
+                }
+        if(tl>0)
+            {
+                    document.getElementById('calculate').style.backgroundColor="green";
+            }else{
+                    document.getElementById('calculate').style.backgroundColor="red";
+            }
+        
+    }
+    function activate()
+        {
+            document.getElementById('nb1').disabled=true;
+        }
+        function activate1()
+        {
+            document.getElementById('nb2').disabled=true;
+        }
+        function activate2()
+        {
+            document.getElementById('nb3').disabled=true;
+        }
+    </script>
+    </head>
+<body>
+    <form >
+    <button type="button"  value="nb1" onclick="activate()">nb1</button><input type="text" id="nb1" maxlength="5" ><br>
+    <button type="button" value="nb2" onclick="activate1()">nb2</button><input type="text"  id="nb2" maxlength="5" ><br>
+    <button type="button"  value="nb3" onclick="activate2()">nb3</button><input type="text" id="nb3" maxlength="5" ><br>
+    <h5>Total </h5>
+     <input type="text" id="total" >
+        <br>
+        <button type="submit" id="calculate" value="Calculate" onclick="ff()">Calculate</button>
+        <button type="reset" name="reset" value="reset" >Reset</button>
+    </form>
+    
+    
+    </body>
+</html>

@@ -1,0 +1,11 @@
+
+.txt p{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+}
+.ct-pageWrapper h2{
+    font-family: serif;
+    text-align: center;
+}
